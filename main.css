@@ -1,0 +1,85 @@
+@keyframes down { from {top:-200px; opacity: 0;}
+    to {top:0px; opacity: 1}
+}
+@keyframes left { from {left:-400px; opacity: 0;}
+    to {left:0px; opacity: 1}
+}
+@keyframes left1 { from {left:-1800px; opacity: 0;}
+    to {left:0px; opacity: 1}
+}
+@keyframes right { from {right:-400px; opacity: 0;}
+    to {right:0px; opacity: 1}
+}
+@keyframes right1 { from {right:-1800px; opacity: 0;}
+    to {right:0px; opacity: 1}
+}
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+text-decoration: none;
+scroll-behavior: smooth;
+}
+body{
+font-family: 'PT Mono', monospace;
+overflow-x:hidden;
+}
+h1{
+    text-align: center;
+    position: relative;
+}
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: #2b323c;
+    }
+    .loader {
+    height:100%;
+    width:100%;
+    position:relative;
+    background: url(/splashscreen.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: loader 4s infinite ease;
+    }
+#down {
+    animation:down 2s ease-out forwards;
+    animation-delay: 2s;    
+}
+#left {
+    animation:left 1s ease-out;
+    animation-delay: 2s;
+    z-index: 4;
+}
+#left1 {
+    animation:left1 4s ease-out;
+    animation-delay: 2s;
+    }
+#right {
+    animation:right 2s ease-out;
+    animation-delay: 2s;
+}
+#right1 {
+    animation:right1 3s ease-out;
+    animation-delay: 2s;
+}
+#left,#left1,#right,#right1{
+    height: 88vh;
+}
+@media only screen and (max-width: 540px) {
+    .loader {
+        height: 100vw;
+        width: 100vw;
+    }
+    #left,#left1,#right,#right1{
+        height: auto;
+    }
+}
